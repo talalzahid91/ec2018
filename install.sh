@@ -15,10 +15,14 @@ cd ..
 sudo rm -rf apache-couchdb-2.1.1
 sudo rm -rf /var/lib/apt/lists/*
 cd
+cd ec2018
 sudo cp local.ini /home/couchdb/etc/local.d/
 sudo cp vm.args /home/couchdb/etc/
 
 sudo mkdir -p /home/couchdb/data /home/couchdb/etc/default.d
+
+sudo chmod 777 initializeconfig.sh
+sudo chmod 777 create-cluster.sh
 
 #sudo adduser --system \
  #       --no-create-home \
